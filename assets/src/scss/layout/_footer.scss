@@ -1,0 +1,99 @@
+// Site Footer
+.site-footer {
+  @include font-smooth;
+  background-color: $color-navy;
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 30px 0;
+  text-align: center;
+
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+
+  @media (min-width: $desk-start) {
+    text-align: left;
+  }
+}
+
+// Footer Logo
+.logo-footer {
+  color: $color-white;
+
+  svg {
+    display: block;
+    margin: 0 auto $small-spacing;
+    max-height: 60px;
+    width: 72px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-white;
+  }
+
+  @media (min-width: $desk-start) {
+    float: left;
+
+    svg {
+      display: inline-block;
+      margin: 0 $small-spacing -12px 0;
+    }
+  }
+}
+
+// Footer Menu
+.nav-footer {
+  margin-top: 30px;
+  width: 100%;
+
+  li {
+    margin: 0 0 $small-spacing;
+
+    &.current_page_item,
+    &:hover,
+    &:focus {
+      a {
+        opacity: 1;
+      }
+    }
+  }
+
+  a {
+    color: $color-white;
+    opacity: .6;
+    transition: opacity .3s ease;
+  }
+
+  // Laptop+ ⬇
+  @media (min-width: $lap-start) {
+    li {
+      display: inline-block;
+      margin: 0 0 0 50px;
+      text-align: center;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  // Desktop+ ⬇
+  @media (min-width: $desk-start) {
+    float: right;
+    margin: 10px 0 0;
+    width: auto;
+
+    ul {
+      text-align: right;
+    }
+
+    li {
+      margin-left: 30px;
+    }
+  }
+}

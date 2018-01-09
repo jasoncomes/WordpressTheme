@@ -1,0 +1,119 @@
+@import "../../../../../../../bower_components/neat/app/assets/stylesheets/neat-helpers";
+
+/*
+ * Typography
+ * http://bourbon.io/docs/#font-stacks - use or add your own.
+ */
+$base-font-family:        'Montserrat', sans-serif;
+$heading-font-family:     $base-font-family;
+
+/*
+ * Font Sizes
+ * Start with a px value and from there always use rems
+ */
+$base-font-size: 16px;
+
+// Line height
+$base-line-height:      (28 / 15);
+$heading-line-height:   1.2;
+
+// Other Sizes
+$base-border-radius:    3px;
+$base-spacing:          25px;
+$small-spacing:         15px;
+$base-z-index:          0;
+
+// Header Sizes
+$header-height:        100px;
+$header-height-mobile: 60px;
+$subnav-height:        60px;
+$subnav-height-mobile: 80px;
+$mobile-width:         350px;
+$dropdown-width:       230px;
+
+
+$sidebar-width:        300px;
+
+/*
+ * Colors
+ * Variable names should describe what they contain.
+ * Use '$color-' + a color description in the variable name
+ * eg $color-blue instead of $color-primary.
+ * These are just a few examples to get you going. Change as needed
+ */
+$color-white:           #FFF;
+$color-black:           #000;
+$color-navy-light:      #303073;
+$color-navy:            #1D1D5C;
+$color-navy-dark:       #151542;
+$color-gray-light:      #DEE2E7;
+$color-gray:            #3F4B59;
+$color-gray-dark:       #2D3540;
+$color-green:           #06CF74;
+$color-green-dark:      #05B566;
+$color-blue-light:      #F5FAFF;
+$color-blue:            #0088FF;
+$color-blue-dark:       #007AE6;
+$color-red:             #FA755A;
+$color-red-dark:        #E06951;
+$color-orange:          #FFB732;
+$color-orange-dark:     #E6A52E;
+$color-teal:            #7795F8;
+$color-teal-dark:       #6A85DE;
+
+// Font Colors
+$base-background-color: $color-white;
+$base-font-color:       $color-gray;
+$action-color:          $color-blue;
+$action-focus-color:    $color-red;
+
+// Border
+$base-border-color:     $color-gray-light;
+$base-border:           1px solid $base-border-color;
+$base-box-shadow:       0 8px 15px 4px rgba($color-black, .09);
+
+// Forms
+$form-box-shadow:       inset 0 1px 3px rgba($color-black, .06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+
+/* THE GRID
+ * To see the following variables in action, check out the example HTML
+ * and CSS in layout/layout.grid
+ *
+ *
+ * Breakpoint widths
+ * The px width here you want a new preakpoint to start. Change these to
+ * best reflect where your site design breaks.
+ *
+ * IMPORTANT: we're assuming you start developing for palm and work wider
+ * This is a best practice but can be tricky at times.  If you must build
+ * from wide to narrow, it's recommended that you change the breakpoint
+ * declarations from min-width to max-width.
+ */
+$lap-start:     620px;
+$desk-start:    980px;
+$wall-start:    1220px;
+
+/*
+ * Body gutter
+ * The breathing room applied to the site wrapper (body by default).
+ * Important so 100% media queries don't go right to the screen edge.
+ * If you want a header/footer that stretches the full width, remove
+ * the body margin rule and add it to your main content wrapper instead.
+ */
+$body-gutter: 20px;
+
+/*
+ * Max Widths
+ * By default both palm and lap media queries are 100% wide and fluid to
+ * best cover the wide range of mobile divices.  Desk and wall media queries
+ * have a fixed width wrapper by default to give more control over the
+ * design implementation.  If you want a fully responsive site at each width
+ * change $desk-max and $wall-max to 100%.
+ */
+$palm-max:  100%;
+$lap-max:   100%;
+$desk-max:  $desk-start - (strip-units($body-gutter * 2));
+$wall-max:  $wall-start - (strip-units($body-gutter * 2));
+$max-width: $desk-start;

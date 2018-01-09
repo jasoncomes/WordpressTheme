@@ -1,0 +1,86 @@
+.page-home {
+  background-position: center 50px;
+  background-size: auto 600px;
+
+  @media (min-width: $lap-start) {
+    background-position: right 50px;
+    background-size: auto;
+  }
+
+  // Section: What Is
+  .what-is {
+    h2 {
+      font-size: 40px;
+      font-weight: 300;
+      line-height: (45 / 40);
+
+      @media (min-width: $lap-start) {
+        margin: $base-spacing 0;
+      }
+
+      @media (min-width: $desk-start) {
+        font-size: 48px;
+        line-height: (55 / 48);
+      }
+
+      strong {
+        display: block;
+      }
+    }
+    
+    @media (max-width: $desk-start - 1px) {
+      .column:last-child {
+        display: none;
+      }
+    }
+  }
+
+  // Section: Big Data
+  .big-data {
+
+    .column:last-child {
+      position: relative;
+
+      img {
+        margin: 50px auto -50px;
+
+        @media (min-width: $desk-start) {
+          bottom: -65px;
+          left: 50%;
+          margin: 0;
+          position: absolute;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  .cards:last-child {
+    position: relative;   
+
+    &::before {
+      @media (min-width: $lap-start) {
+        background-color: #FAFAFA; // Orphan
+        border-top: $base-border;
+        content: '';
+        display: block;
+        height: 9999em;
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        width: 100vw;
+      }
+
+      @media (min-width: $desk-start) {
+        top: 210px;
+      }
+
+      @media (min-width: $wall-start) {
+        top: 268px;
+      }
+    }
+  }
+}

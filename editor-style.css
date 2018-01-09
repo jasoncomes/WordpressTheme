@@ -1,0 +1,158 @@
+/* Shortcode Markup */
+
+/* Tables */
+[class^='table'],
+.mce-item-table {
+  margin: 25px 0;
+  width: 100%;
+}
+
+[class^='table'] caption,
+[class^='table'] th,
+[class^='table'] td {
+  padding: 10px;
+}
+
+.mce-item-table, 
+.mce-item-table td, 
+.mce-item-table th, 
+.mce-item-table caption {
+  border: 0;
+}
+
+.mce-item-table {
+  background-color: #DFE8EE;
+  border-spacing: 4px;
+}
+
+.mce-item-table caption {
+  background: #DFE8EE;
+}
+
+.mce-item-table td,
+.mce-item-table th {
+  background-color: #FFFFFF;
+  transition: box-shadow .2s ease;
+}
+
+.mce-item-table td:hover,
+.mce-item-table td:active,
+.mce-item-table td:focus {
+  box-shadow: inset 0px 0px 3px #7b7b7b;
+}
+
+/* Columns */
+[class^='columns'] {
+  align-items: stretch;
+  background-color: #DFE8EE;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 25px 0;
+  width: 100%;
+}
+
+[class^='columns']::before,
+[class^='columns']::after {
+  content: '';
+  display: table;
+}
+
+[class^='columns'] .column {
+  background-color: #ffffff;
+  flex: 1;
+  margin: 4px 2px;
+  padding: 15px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  transition: box-shadow .2s ease;
+}
+
+[class^='columns'] .column:hover,
+[class^='columns'] .column:active,
+[class^='columns'] .column:focus {
+  box-shadow: inset 0px 0px 3px #7b7b7b;
+}
+
+[class^='columns'] .column::before,
+[class^='columns'] .column::after {
+  content: '';
+  display: table-cell;
+}
+
+[class^='columns'] .column::after {
+  clear: both;
+}
+
+[class^='columns'] .column:first-child {
+  margin-left: 4px;
+}
+
+[class^='columns'] .column:last-child {
+  margin-right: 4px;
+}
+
+[class^='columns'][class$='-two'] .column {
+  flex: 2;
+}
+
+[class^='columns'][class$='-three'] .column {
+  flex: 3;
+}
+
+[class^='columns'][class$='-four'] .column {
+  flex: 4;
+}
+
+[class^='columns'][class$='-two-third'] .column:first-of-type {
+  flex: 2;
+}
+
+[class^='columns'][class$='-one-third'] .column:last-of-type {
+  flex: 2;
+}
+
+
+/* Checklist */
+[class^='element-checklist'] {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 25px 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+[class^='element-checklist'] li {
+  border: 1px dashed #b4b9be;
+  box-sizing: border-box;
+  flex-basis: calc(33% - 4px);
+  margin: 2px;
+  padding: 15px;
+  position: relative;
+}
+
+[class^='element-checklist'] li:before {
+  background: #01bd78;
+  border: 1px solid #01bd78;
+  border-radius: 50%;
+  color: #ffffff;
+  content: '✔';
+  display: block;
+  height: 40px;
+  left: 50%;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 40px;
+}

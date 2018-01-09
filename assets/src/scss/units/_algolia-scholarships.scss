@@ -1,0 +1,60 @@
+// Scholarships
+.algolia-scholarships {
+  display: flex;
+  flex-flow: row wrap;
+
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+
+  // Filters
+  .filters {
+    flex: 1 100%;
+    order: 3;
+
+    @media (min-width: $desk-start) {
+      float: left;
+      width: $sidebar-width;
+    }
+  }
+
+  // Results
+  .results {
+    flex: 1 100%;
+    order: 4;
+
+    @media (min-width: $desk-start) {
+      float: right;
+      width: calc(100% - #{$sidebar-width + $body-gutter});
+    }
+  }
+
+  @media (min-width: $desk-start) {
+    display: block;
+
+    #algolia-currentRefinedValues {
+      margin-top: 0;
+    }
+  }
+
+  // Count
+  .result-stats {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .ais-hits--item {
+    .item {
+      border-radius: 0;
+      border-top: 0;
+    }
+
+    &:last-of-type .item {
+      border-bottom-left-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+    }
+  }
+}

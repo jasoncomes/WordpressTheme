@@ -1,0 +1,11 @@
+<?php
+
+/*
+Title: Scholarships - Algolia
+Shortcode: [scholarships_algolia study_areas="" title="Scholarships"]
+Html:
+Styleguide: [scholarships_algolia study_areas=""]
+Instructions: <strong>Selectable Study Areas:</strong><br /> Example usage: <pre>study_areas="journalism|medicine|Art"</pre>general|Nursing|education|engineering|Music|business|Law|accounting|agriculture|journalism|medicine|Art|business administration|architecture|occupational therapy|Civil engineering|Biology|English|history|elementary education|science|mathematics|food science/technology|library science|theatre|Textile chemistry, textile management, textile science|dental hygiene|fine arts|Automotive marketing|Chemical engineering|computer science|culinary arts|document management, graphic communication|human sciences|mechanical engineering|Aviation|American history|chemistry|Electrical engineering|agribusiness, agriscience|engineering, math, science, technology|hospitality with focus on travel and tourism, tourism-specific area|political science|art history|healthcare|law enforcement|pharmacy|Horticulture|Physics|visual arts|automotive aftermarket management|industrial engineering|landscape architecture|ministry|nuclear engineering and nuclear science|travel/tourism|chiropractic|interior design|criminal justice|engineering, science|geology|health-related field|marketing|social work|teacher education|teaching|Psychology|dentistry|engineering, mathematics, science|fashion|performing arts|automotive|electrical engineering, mechanical engineering|environmental studies|graphic design|humanities|management|medical|special education|Computer science and aeronautical/aerospace, astronautical, architectural, automotive, civil, hemical, computer, electrical, environmental, industrial, mechanical, manufacturing, materials science, or petroleum engineering|French|agriculture-related field|arts and sciences|business management|communications|communications, journalism|finance|finance, hospitality, technology|marine-related field|math, science|Geology, geophysics|Graphic communications|arts|broadcasting, electronic media, television|construction|dance|economics|engineering, math, science|engineering, mathematics, science, technology|family and consumer sciences
+*/
+
+include TMPL_DIR . '/algolia/scholarships/html.php';

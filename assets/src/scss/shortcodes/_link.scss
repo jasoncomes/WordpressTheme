@@ -1,0 +1,101 @@
+.links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: $base-spacing 0;
+}
+
+.link {
+  @include font-smooth;
+  align-items: left;
+  background-color: $color-blue-light;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: $base-border-radius;
+  box-shadow: inset 0 0 0 1px $base-border-color;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  line-height: (20 / 18);
+  margin: $small-spacing 0;
+  min-height: 75px;
+  padding: $small-spacing 60px $small-spacing $small-spacing;
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
+
+  @media (min-width: $lap-start) {
+    font-size: 20px;
+    min-height: 100px;
+  }
+
+  &::before {
+    color: $color-gray;
+    content: attr(data-subtitle);
+    display: inline;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+
+  &::after {
+    background: $color-blue url('../img/icon-arrow-right.svg') no-repeat center / 6px auto;
+    border-radius: $base-border-radius;
+    bottom: $small-spacing;
+    content: '';
+    display: block;
+    position: absolute;
+    right: $small-spacing;
+    top: $small-spacing;
+    width: 28px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+
+    &::after {
+      background-color: $color-red;
+      background-image: url('../img/icon-arrow-right.svg');
+    }
+  }
+
+  .links.type-featured &,
+  &.type-featured {
+    background-position: center top;
+    background-size: auto 160px;
+    padding: 175px 60px $small-spacing $small-spacing;
+
+    &::after {
+      top: 175px;
+    }
+  }
+
+  &.type-default {
+    @media (max-width: $lap-start - 1px) {
+      background-image: none !important;
+    }
+
+    @media (min-width: $lap-start) {
+      background-position: left top;
+      background-size: 100px 100%;
+      padding-left: 115px;
+    }
+  }
+
+  .links & {
+    margin: 0 0 $small-spacing;
+
+    @media (min-width: $desk-start) {
+      flex-basis: calc(50% - 7.5px);
+      margin: 0 0 $small-spacing;
+      max-width: calc(50% - 7.5px);
+      width: calc(50% - 7.5px);
+    }
+  }
+}
